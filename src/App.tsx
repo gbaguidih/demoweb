@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar';
 import Main from './Components/Main';
 import Footer from './Components/Footer';
 // import './App.css';
-
+import 'boxicons'
 function App() {
   return (
     <div >
