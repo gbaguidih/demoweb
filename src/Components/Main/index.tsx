@@ -1,52 +1,105 @@
 import React from "react";
 import "./style.css";
 
-function Main() {
+interface MainProps {
+  title: string;
+  title2: string;
+  image: string;
+  description: string;
+  description2: string;
+  title3: String;
+  title4: String;
+}
+
+  const Main: React.FC<MainProps> = ({ title,title2, image, description,title3,title4,description2}) => {
+  
   return (
     <>
       {/* component */}
       <div className="bg-gray-100">
       <div className="flex items-start bg-gray-100 " >
-
       <div className="relative flex max-w-[48rem] flex-col rounded-xl bg-gray-100 text-gray-700 shadow-md  bg-gray-100  ml-10 p-4 ">
       <p className="mt-3 block font-sans text-xl font-normal leading-relaxed text-gray-700 antialiased bg-gray-100 ">
            <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased bg-gray-100 ">
-           Consectetuer vehicula ab</h4>
+           {title} </h4>
           </p><br />
-          <p className="text-red-600">November 21, 2017 / Kitchen, Lifestyle</p>
+          <p className="text-red-600">{title2}</p>
 
         <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
           <img
-            src="https://websitedemos.net/blog-02/wp-content/uploads/sites/132/2017/11/pic26-free-img.jpg"
+            src={image}
             alt="ui/ux review check"
           />
         </div>
         <div className="p-6">
           <p className="mt-3 block font-sans text-xl font-normal leading-relaxed text-gray-700 antialiased">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi incidunt eaque, doloremque voluptates fugiat officiis excepturi eius culpa sit natus expedita corrupti molestiae vitae dolorem velit! Dolor, recusandae. Quod, est?
+          {description}
           </p>
         </div>
 
         <div className="flex justify-between mt-4 bg-gray-100 ">
-          <span className="font-thin text-sm"><a href="#"><p className="text-red-600">Read more  </p></a>
-          </span><br /><br />
+        <a className="inline-block" href="#">
+        <button
+          className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+        >
+          <p className="text-red-600">Read More </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            aria-hidden="true"
+            className="h-4 w-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            ></path>
+          </svg>
+        </button>
+      </a>
+       <br /><br />
         
           </div>
   <main className="">
   <div className="mt-6 md:flex space-x-6 bg-gray-100 ">
   <div className="relative flex max-w-[20rem] flex-col rounded-xl bg-gray-100 text-gray-700 shadow-md bg-gray-100">
     <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased bg-gray-100 ">
-    Consectetuer vehicula  <br /> Consectetuer vehicula ab</h4><br />
+    {title3} <br /></h4> 
     <div className="bg-gray-100 ">
-    <p className="text-red-600 bg-gray-100 ">November 21, 2017 / Kitchen, Lifestyle</p>
+    <br /><p className="text-red-600 bg-gray-100 ">{title4}</p>
       <img src="https://websitedemos.net/blog-02/wp-content/uploads/sites/132/2017/11/hero01-free-img.jpg" alt="" />
       <div className="px-6">
         <br /><p className="text-gray-700 mb-2">
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....
-        </p>
+          {description2}</p>
         <div className="flex justify-between mt-4">
-          <span className="font-thin text-sm"><a href="#"><p className="text-red-600">Read more  </p></a>
-          </span><br /><br />
+        <a className="inline-block" href="#">
+        <button
+          className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+        >
+          <p className="text-red-600">Read More </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            aria-hidden="true"
+            className="h-4 w-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            ></path>
+          </svg>
+        </button>
+      </a>
+       <br /><br />
           </div>
           </div>
       </div>
@@ -64,8 +117,30 @@ function Main() {
           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....
         </p>
         <div className="flex justify-between mt-4">
-          <span className="font-thin text-sm"><a href="#"><p className="text-red-600">Read more  </p></a>
-          </span><br /><br />
+        <a className="inline-block" href="#">
+        <button
+          className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+        >
+          <p className="text-red-600">Read More </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            aria-hidden="true"
+            className="h-4 w-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            ></path>
+          </svg>
+        </button>
+      </a>
+          <br /><br />
           </div>
           </div>
       </div>
@@ -84,8 +159,30 @@ function Main() {
           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....
         </p>
         <div className="flex justify-between mt-4">
-          <span className="font-thin text-sm"><a href="#"><p className="text-red-600">Read more  </p></a>
-          </span><br /><br />
+        <a className="inline-block" href="#">
+        <button
+          className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+        >
+          <p className="text-red-600">Read More </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            aria-hidden="true"
+            className="h-4 w-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            ></path>
+          </svg>
+        </button>
+      </a>
+       <br /><br />
           </div>
           </div>
       </div>
@@ -102,8 +199,30 @@ function Main() {
           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....
         </p>
         <div className="flex justify-between mt-4">
-          <span className="font-thin text-sm"><a href="#"><p className="text-red-600">Read more  </p></a>
-          </span><br /><br />
+        <a className="inline-block" href="#">
+        <button
+          className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+        >
+          <p className="text-red-600">Read More </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            aria-hidden="true"
+            className="h-4 w-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            ></path>
+          </svg>
+        </button>
+      </a>
+       <br /><br />
           </div>
           </div>
       </div>
@@ -168,7 +287,8 @@ function Main() {
                     </div>
                     <div className="p-6 m-0">
                         <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
-                            startups
+                                   <p className="text-red-600">  startups   </p>
+
                         </h6>
                         <p>
                             Lyft launching cross-platform service this week
@@ -185,7 +305,8 @@ function Main() {
                     </div>
                     <div className="p-6 m-0">
                         <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
-                            startups
+                        <p className="text-red-600">  startups   </p>
+
                         </h6>
                         <p>
                             Lyft launching cross-platform service this week
@@ -202,7 +323,8 @@ function Main() {
                     </div>
                     <div className="p-6 m-0">
                         <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
-                            startups
+                        <p className="text-red-600">  startups   </p>
+
                         </h6>
                         <p>
                             Lyft launching cross-platform service this week
@@ -219,7 +341,7 @@ function Main() {
                     </div>
                     <div className="p-6 m-0">
                         <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
-                            startups
+                        <p className="text-red-600">  startups   </p>
                         </h6>
                         <p>
                             Lyft launching cross-platform service this week
@@ -238,7 +360,7 @@ function Main() {
                     </div>
                     <div className="p-6 m-0">
                         <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
-                            startups
+                        <p className="text-red-600">  startups   </p>
                         </h6>
                         <p>
                             Lyft launching cross-platform service this week
