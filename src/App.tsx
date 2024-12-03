@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import Navbar from './Components/Navbar';
 import Main from './Components/Main';
+import Paginate2 from './Components/Main/Paginates/Paginate2';
+import Paginate3 from './Components/Main/Paginates/Paginate3';
+import Nextpaginate from './Components/Main/Paginates/Nextpaginate';
 import Footer from './Components/Footer';
 // import './App.css';
 import 'boxicons'
