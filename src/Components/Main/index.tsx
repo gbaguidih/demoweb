@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import "./tailwind.css";
 
 interface MainProps {
   title: string;
